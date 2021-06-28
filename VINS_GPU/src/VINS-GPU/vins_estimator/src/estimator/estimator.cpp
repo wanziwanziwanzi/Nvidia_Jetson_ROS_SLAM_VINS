@@ -69,9 +69,9 @@ void Estimator::inputImage(double t, const cv::Mat &_img, const cv::Mat &_img1)
     
     if(MULTIPLE_THREAD)  
     {     
-	if(inputImageCnt % 2 == 0)
+	//if(inputImageCnt % 2 == 0)          // if you want keep the positioning frame rate consistent with the image frame rate, note out 72,74 and 82.
 
-	{
+	//{
 
 	mBuf.lock();
 
@@ -79,7 +79,7 @@ void Estimator::inputImage(double t, const cv::Mat &_img, const cv::Mat &_img1)
 
 	mBuf.unlock();
 
-	}
+	//}
         
     }
     else
